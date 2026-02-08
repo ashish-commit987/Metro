@@ -16,9 +16,9 @@ export const sendOtp = async (req, res) => {
     //CHECK RATE LIMIT FIRST
     const rateLimitCheck = canSendOtp(email);
     if (!rateLimitCheck.allowed) {
-      return res.status(429).json({ 
+      return res.status(429).json({
         message: rateLimitCheck.message,
-        retryAfter: rateLimitCheck.retryAfter 
+        retryAfter: rateLimitCheck.retryAfter
       });
     }
 
@@ -44,14 +44,16 @@ export const sendOtp = async (req, res) => {
 
     //Send OTP
     await createAndSendOtp(email);
-    
+
     //RECORD THE ATTEMPT
     recordOtpAttempt(email);
 
     res.status(200).json({ message: "OTP sent to your email" });
   } catch (err) {
     console.error("sendOtp error:", err);
-    res.status(500).json({ message: "Failed to send OTP" });
+    // Return detailed error for debugging (remove in production if needed)
+    const errorMessage = err.response && err.response.body ? JSON.stringify(err.response.body) : err.message;
+    res.status(500).json({ message: "Failed to send OTP", error: errorMessage });
   }
 };
 
