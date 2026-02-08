@@ -1,0 +1,140 @@
+Loading brevo-email-service...
+[dotenv@17.2.4] injecting env (9) from .env -- tip: 🔑 add access controls to secrets: https://dotenvx.com/ops
+Starting test-email.js...
+[dotenv@17.2.4] injecting env (0) from .env -- tip: ⚙️  enable debug logging with { debug: true }
+Starting test...
+✅ BREVO_API_KEY is present
+Sender Email: rajputashish2001@gmail.com
+Calling sendOtpEmail...
+✅ API Response: {
+  "response": {
+    "_events": {},
+    "_readableState": {
+      "highWaterMark": 65536,
+      "buffer": [
+        {
+          "type": "Buffer",
+          "data": [
+            123,
+            34,
+            109,
+            101,
+            115,
+            115,
+            97,
+            103,
+            101,
+            73,
+            100,
+            34,
+            58,
+            34,
+            60,
+            50,
+            48,
+            50,
+            54,
+            48,
+            50,
+            48,
+            56,
+            48,
+            57,
+            50,
+            52,
+            46,
+            49,
+            52,
+            57,
+            53,
+            50,
+            49,
+            49,
+            57,
+            56,
+            49,
+            51,
+            64,
+            115,
+            109,
+            116,
+            112,
+            45,
+            114,
+            101,
+            108,
+            97,
+            121,
+            46,
+            109,
+            97,
+            105,
+            108,
+            105,
+            110,
+            46,
+            102,
+            114,
+            62,
+            34,
+            125
+          ]
+        }
+      ],
+      "bufferIndex": 0,
+      "length": 63,
+      "pipes": [],
+      "awaitDrainWriters": null
+    },
+    "socket": {
+      "remoteAddress": "",
+      "remoteFamily": "",
+      "remotePort": 0,
+      "localAddress": "",
+      "localPort": 0,
+      "bytesRead": 0,
+      "bytesWritten": 0,
+      "connecting": false,
+      "destroyed": false,
+      "readable": true,
+      "writable": false,
+      "allowHalfOpen": false,
+      "timeout": 0
+    },
+    "httpVersionMajor": null,
+    "httpVersionMinor": null,
+    "httpVersion": null,
+    "complete": false,
+    "rawHeaders": [],
+    "rawTrailers": [],
+    "joinDuplicateHeaders": false,
+    "aborted": false,
+    "upgrade": null,
+    "url": "",
+    "method": null,
+    "statusCode": 201,
+    "statusMessage": "Created",
+    "client": {
+      "remoteAddress": "",
+      "remoteFamily": "",
+      "remotePort": 0,
+      "localAddress": "",
+      "localPort": 0,
+      "bytesRead": 0,
+      "bytesWritten": 0,
+      "connecting": false,
+      "destroyed": false,
+      "readable": true,
+      "writable": false,
+      "allowHalfOpen": false,
+      "timeout": 0
+    },
+    "_consuming": false,
+    "_dumped": false
+  },
+  "body": {
+    "messageId": "<202602080924.14952119813@smtp-relay.mailin.fr>"
+  }
+}
+✅ OTP email sent via Brevo: undefined
+✅ Test function promise resolved
